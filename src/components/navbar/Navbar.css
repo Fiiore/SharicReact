@@ -1,0 +1,69 @@
+/*
+ * Configuration menu button
+ */
+ /* Background color and border bottom color of the navigator */
+nav {
+    background-color: #FFFFFF;
+    border-bottom: solid #ff619e 5px;
+    height: 100%;
+}
+
+/*
+ * Left and center areas of the navigator
+ */
+/* Logo size */
+#logo {
+    width: 3em;
+}
+
+/* Navigator width */
+.navigator {
+	width: 50%;
+}
+
+/* Active navigation (current tab) */
+.activeItem :nth-child(n) {
+	/* border-top: solid #ff619e 2px; */
+	color: #ff619e;
+	font-weight: bold;
+}
+
+/*
+ * Configuration menu button
+ */
+/* Colors for the configuration menu button */
+.configBtn {
+	color: #FF619E;
+	background-color: #FFFFFF;
+	border-color: #FF619E;
+}
+
+/* Box shadow for the configuration menu button */
+.btn-secondary:focus {
+	box-shadow: none;
+}
+
+/* Colors for the menu button when hovered or active */
+.configBtn:hover, .configBtn:active {
+	background-color: #FF619E;
+	border-color: #FFFFFF;
+}
+
+/*
+ * Configuration menu items
+ */
+/* Transition and color of menu items when hovered */
+.dropdown-item:hover {
+	background-color: #ff90bb;
+	color: white;
+	visibility:visible;
+	-webkit-transition: background-color 0.4s;
+	-moz-transition: background-color 0.4s;
+	-o-transition: background-color 0.4s;
+	transition: background-color 0.4s;
+}
+
+/* Border top for last menu item (Logout) */
+.dropdown-menu :last-child {
+	border-top: solid darkgrey 1px;
+}

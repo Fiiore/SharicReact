@@ -1,0 +1,153 @@
+
+/******************************** Profile data ********************************/
+/* Styles of profile data box */
+.frame {
+    border-radius: 2px;
+    box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+/* Styles of profile data box */
+.center {
+    background: #fff;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+/* Padding and text alignment of profile data box */
+.profile {
+    padding: 0;
+    text-align: center;
+}
+
+/* Position of profile data box elements */
+.profile > :nth-child(n) {
+    float: left;
+}
+
+/*
+ *  Profile image
+ */
+/* Profile picture container sizing */
+.profile .image {
+    width: 40%;
+}
+
+/* Profile picture sizing */
+.profile .image img {
+    height: 100%;
+    width: 100%;
+}
+
+/* Blur of the profile picture */
+.image:after {
+  content:'';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 40%;
+  height: 100%;
+  display: inline-block;
+  background: linear-gradient(to right, rgba(255,255,255,0) 0%, #fff 100%);
+}
+
+/*
+ *  Main profile data
+ */
+/* Data box sizing */
+.profile .infoContainer {
+    width: 60%;
+    height: 100%;
+}
+
+/* Display of the Edit button */
+.profile .infoContainer:hover #editBtn {
+    display: block;
+    cursor: pointer;
+}
+
+/* Properties of the Edit button */
+.profile .infoContainer #editBtn {
+    display: none;
+    position: absolute;
+    top: 5%;
+    right: 2%;
+    width: 1em;
+    height: 1em;
+}
+
+/* Display of the form elements */
+.profile input {
+    display: none;
+}
+
+/* Width of the profile data box */
+.profile .info {
+    width: 60%;
+}
+
+/* Inner space of the profile data elements */
+.profile .info :nth-child(n) {
+    padding: 1em 0;
+}
+
+/* Weight of the profile name */
+.profile .name {
+    font-weight: bolder;
+}
+
+/* Line height of the description area */
+.profile .description {
+    line-height: 15px;
+}
+
+/*
+ *  Profile stadistics
+ */
+/* Sizing for profile stadistics */
+.stats {
+    padding: 0;
+    width: 100%;
+}
+
+/* Properties for profile stadistics elements */
+.stats .box {
+    box-sizing: border-box;
+    text-align: center;
+    transition: all 0.4s ease-in-out;
+    color: white;
+    height: 100%;
+    box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+/* Background color for Following box */
+.box1 {
+    background-color: #d17a8b;
+}
+
+/* Background color for Followers box */
+.box2 {
+    background-color: #c6a535;
+}
+
+/* Background color for Likes box */
+.box3 {
+    background-color: #5892cd;
+}
+
+/* Inner space and cursor on stadistics elements hover */
+.stats .box:hover {
+    padding: 1em;
+    cursor: pointer;
+}
+
+/* Display of stadistics texts */
+.stats span {
+    display: block;
+}
+
+/* Font weight of stadistics numbers */
+.stats .value {
+    font-weight: 600;
+}
+
+/******************************** Tables ********************************/
