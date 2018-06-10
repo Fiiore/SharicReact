@@ -5,7 +5,6 @@
 nav {
     background-color: #FFFFFF;
     border-bottom: solid #ff619e 5px;
-    height: 100%;
 }
 
 /*
@@ -22,8 +21,7 @@ nav {
 }
 
 /* Active navigation (current tab) */
-.activeItem :nth-child(n) {
-	/* border-top: solid #ff619e 2px; */
+.active :nth-child(n) {
 	color: #ff619e;
 	font-weight: bold;
 }
@@ -31,26 +29,41 @@ nav {
 /*
  * Configuration menu button
  */
-/* Colors for the configuration menu button */
+/* Colors of the configuration menu button */
 .configBtn {
 	color: #FF619E;
 	background-color: #FFFFFF;
 	border-color: #FF619E;
 }
 
-/* Box shadow for the configuration menu button */
+/* Box shadow of the configuration menu button */
 .btn-secondary:focus {
 	box-shadow: none;
 }
 
-/* Colors for the menu button when hovered or active */
+/* Colors of the menu button when hovered or active */
 .configBtn:hover, .configBtn:active {
 	background-color: #FF619E;
 	border-color: #FFFFFF;
 }
 
+/* Background and border colors of the menu button when it's active */
+nav .btn-secondary:not(:disabled):not(.disabled).active,
+nav .btn-secondary:not(:disabled):not(.disabled):active,
+nav .show>.btn-secondary.dropdown-toggle {
+	background-color: #c1557f;
+	border-color: transparent;
+}
+
+/* Box shadow of the menu button when it's on focus */
+nav .btn-secondary:not(:disabled):not(.disabled).active:focus,
+nav .btn-secondary:not(:disabled):not(.disabled):active:focus,
+nav .show>.btn-secondary.dropdown-toggle:focus {
+	box-shadow: none;
+}
+
 /*
- * Configuration menu items
+ * Configuration menu
  */
 /* Transition and color of menu items when hovered */
 .dropdown-item:hover {
@@ -63,7 +76,8 @@ nav {
 	transition: background-color 0.4s;
 }
 
-/* Border top for last menu item (Logout) */
+/* Border top of last menu item (Logout) */
 .dropdown-menu :last-child {
+	margin-top: 0.5em;
 	border-top: solid darkgrey 1px;
 }
