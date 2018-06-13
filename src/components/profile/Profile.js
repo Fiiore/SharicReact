@@ -50,11 +50,10 @@ class Profile extends Component {
 	}
 
 	restoreFormValue(e) {
-		console.log(e);
 		if (e.target.name === 'nickname') {
-			console.log('Restaurar valor Nickname');
+			// Restaurar valor Nickname
 		} else {
-			console.log('Restaurar valor Description');
+			// Restaurar valor Description
 		}
 	}
 
@@ -63,7 +62,7 @@ class Profile extends Component {
 			<div className="d-flex justify-content-center">
 
 					{/* Profile data container */}
-					<div className="center col-md-8">
+					<div className="user col-md-8">
 
 						{/* Profile data */}
 						<div className="profile">

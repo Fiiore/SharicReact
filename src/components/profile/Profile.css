@@ -1,14 +1,15 @@
 /******************************** Profile containers ********************************/
 /* Styles of profile data box */
-.center {
+.user {
     background: #fff;
     overflow: hidden;
     border-radius: 3px;
     box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+    padding: 0;
 }
 
 /* Avoid auto margins and paddings */
-.center, .center .row, .profileData, .image {
+.profile .user .row, .profile .profileData, .image {
     margin: 0;
     padding: 0;
 }
@@ -16,8 +17,13 @@
 /******************************** Profile data ********************************/
 /* Media query for mobile devices */
 @media only screen and (max-width: 425px) {
+    /* Inner space for image container */
+    .image {
+        padding: 1em;
+    }
+
     /* Width of the profile image */
-    .profile .image img {
+    .image img {
         width: 50%;
     }
 
@@ -28,11 +34,11 @@
 
     /* Inner space for info container */
     .info {
-        padding: 1em 0.5em;
+        padding: 0.7em;
     }
 
     /* Direction of the items of the stadistics */
-    .stats {
+    .profile .stats {
         flex-direction: row;
     }
 
@@ -46,7 +52,7 @@
 /* Media query for tablet devices or computers */
 @media only screen and (min-width: 426px) {
     /* Width of the profile image */
-    .profile .image img {
+    .image img {
         width: 100%;
     }
 
@@ -60,12 +66,12 @@
         padding: 0 1em;
     }
     /* Direction of the items of the stadistics */
-    .stats {
+    .profile .stats {
         flex-direction: column;
     }
 
     /* Shadow of the stadistics boxes */
-    .stats .box {
+    .profile .stats .box {
         box-shadow: -1px 0px 5px 0px rgba(0, 0, 0, 0.3);
     }
 }
@@ -105,7 +111,7 @@
 }
 
 /* Weight of the profile name and stats values */
-.profile .name, .stats .value {
+.name, .stats .value {
     font-weight: bolder;
 }
 
@@ -113,24 +119,24 @@
  * Profile form
  */
 /* Display of the form elements */
-.profileForm {
+.profile .profileForm {
     flex-direction: column;
 }
 
 /* Size and margin of the form elements */
-.profileForm > :nth-child(n) {
+.profile .profileForm > :nth-child(n) {
     width: 100%;
     margin-bottom: 1%;
 }
 
 /* Display of the form elements */
-.profileForm .formButtons {
+.profile .profileForm .formButtons {
     display: flex;
     justify-content: space-around;
 }
 
 /* Size of the form buttons */
-.formButtons button {
+.profile .formButtons button {
     width: 6em;
 }
 
@@ -138,12 +144,12 @@
  * Profile stadistics
  */
 /* Inner space for profile stadistics */
-.stats {
+.profile .stats {
     padding: 0;
 }
 
 /* Properties for profile stadistics elements */
-.stats .box {
+.profile .stats .box {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -152,7 +158,7 @@
 }
 
 /* Transition for properties of the profile stadistics elements */
-.stats .box:hover {
+.profile .stats .box:hover {
     background-color: #ff90bb;
     color: white;
     transition: all 0.3s;
